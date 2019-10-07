@@ -3,6 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "firebase": "^7.1.0",
+    "prop-types": "^15.7.2",
     "react": "^16.10.2",
     "react-dom": "^16.10.2",
     "react-scripts": "3.2.0"
@@ -10,6 +12,10 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
+    "build:env": "react-app-env --env-file=./environments/${REACT_APP_ENV}.env build",
+    "build:master": "REACT_APP_ENV=prod npm run build:env",
+    "build:homolog": "REACT_APP_ENV=qa npm run build:env",
+    "build:develop": "REACT_APP_ENV=dev npm run build:env",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
@@ -30,6 +36,7 @@
   },
   "devDependencies": {
     "eslint-plugin-prettier": "^3.1.1",
-    "prettier": "1.18.2"
+    "prettier": "1.18.2",
+    "react-app-env": "^1.2.3"
   }
 }
