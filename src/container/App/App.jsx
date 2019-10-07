@@ -1,6 +1,5 @@
 import React from 'react';
 import logo from './logo.svg';
-import DatabaseService from '../../shared/services/dbService';
 import './App.css';
 
 const App = () => (
